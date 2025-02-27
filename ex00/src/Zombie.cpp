@@ -6,17 +6,16 @@
 /*   By: jay <jay@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/27 18:24:53 by jay               #+#    #+#             */
-/*   Updated: 2025/02/27 19:49:23 by jay              ###   ########.fr       */
+/*   Updated: 2025/02/27 20:00:22 by jay              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Zombie.hpp"
 
-Zombie::Zombie() {
+Zombie::Zombie() : _name("Unknown") {
 }
 
-Zombie::Zombie(std::string name) {
-  this->_name = name;
+Zombie::Zombie(std::string name) : _name(name) {
 }
 
 Zombie::~Zombie() {
