@@ -6,7 +6,7 @@
 /*   By: jay <jay@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/27 23:10:51 by jay               #+#    #+#             */
-/*   Updated: 2025/02/27 23:14:41 by jay              ###   ########.fr       */
+/*   Updated: 2025/02/27 23:21:39 by jay              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,5 +27,4 @@ class Zombie {
   void announce() const;
 };
 
-Zombie *newZombie(std::string name);
-void randomChump(std::string name);
+Zombie *zombieHorde(int N, std::string name);

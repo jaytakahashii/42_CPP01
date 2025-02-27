@@ -6,7 +6,20 @@
 /*   By: jay <jay@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/27 23:11:01 by jay               #+#    #+#             */
-/*   Updated: 2025/02/27 23:11:02 by jay              ###   ########.fr       */
+/*   Updated: 2025/02/27 23:23:02 by jay              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "Zombie.hpp"
+
+int main() {
+  Zombie *horde = zombieHorde(5, "Zombie");
+
+  if (horde) {
+    for (int i = 0; i < 5; i++) {
+      horde[i].announce();
+    }
+  }
+  delete[] horde;
+  return 0;
+}
