@@ -6,7 +6,7 @@
 #    By: jay <jay@student.42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/02/27 17:48:57 by jay               #+#    #+#              #
-#    Updated: 2025/02/27 18:27:35 by jay              ###   ########.fr        #
+#    Updated: 2025/02/27 18:47:30 by jay              ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -21,7 +21,7 @@ OBJ_DIR			= .obj/
 
 INCLUDE_DIR		= include/
 INCLUDE			= -I$(INCLUDE_DIR)
-HEADERS			= $(shell find $(INCLUDE_DIR) -name "*.h")
+HEADERS			= $(shell find $(INCLUDE_DIR) -name "*.hpp")
 
 DEPS			= $(HEADERS) $(MAKEFILE)
 
@@ -58,7 +58,7 @@ $(OBJ_DIR):
 
 $(OBJ_DIR)%.o: $(SRC_DIR)%.cpp
 	@echo $(Y) "Compiling $<" $(X)
-	@$(CC) $(CFLAGS) -c $< -o $@
+	@$(CC) $(CFLAGS) $(INCLUDE) -c $< -o $@
 	@printf $(UP)$(CUT)
 
 clean:
