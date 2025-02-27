@@ -6,15 +6,21 @@
 /*   By: jay <jay@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/27 18:24:44 by jay               #+#    #+#             */
-/*   Updated: 2025/02/27 19:43:12 by jay              ###   ########.fr       */
+/*   Updated: 2025/02/27 20:13:02 by jay              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Zombie.hpp"
 
 int main() {
-  randomChump("Zombie1");
-  randomChump("Zombie2");
-  randomChump("Zombie3");
+  Zombie z1("StackZombie");
+  z1.announce();  // auto destruct
+
+  Zombie* z2 = newZombie("HeapZombie");
+  z2->announce();
+  delete z2;  // manual destruct
+
+  randomChump("RandomZombie");  // auto destruct
+
   return 0;
 }
