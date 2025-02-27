@@ -6,7 +6,7 @@
 /*   By: jay <jay@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/27 18:24:44 by jay               #+#    #+#             */
-/*   Updated: 2025/02/27 20:13:02 by jay              ###   ########.fr       */
+/*   Updated: 2025/02/27 20:20:20 by jay              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,8 @@ int main() {
   delete z2;  // manual destruct
 
   randomChump("RandomZombie");  // auto destruct
+
+  // Zombie z3; // error: Zombie Class has no default constructor
 
   return 0;
 }
