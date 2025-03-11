@@ -9,10 +9,8 @@ INCLUDE_DIR	= include/
 INCLUDE			= -I$(INCLUDE_DIR)
 HEADERS			= $(shell find $(INCLUDE_DIR) -name "*.hpp")
 
-DEPS				= $(HEADERS) $(MAKEFILE)
-
-CC					= c++
-CFLAGS			= -Wall -Wextra -Werror -std=c++98
+CXX					= c++
+CXXFLAGS			= -Wall -Wextra -Werror -std=c++98
 
 RM					= rm -rf
 
@@ -36,15 +34,15 @@ $(NAME): $(OBJ_DIR) $(OBJS) $(DEPS)
 	@echo $(Y) "$(NAME) src files successfully compiled\n" $(X)
 	@echo $(B) "$(NAME) creating" $(X)
 	@printf $(UP)$(CUT)
-	@$(CC) $(CFLAGS) $(OBJS) -o $(NAME)
+	@$(CXX) $(CXXFLAGS) $(OBJS) -o $(NAME)
 	@echo $(G) "!! $(NAME) created !!\n" $(X)
 
 $(OBJ_DIR):
-	@mkdir $(OBJ_DIR)
+	@mkdir -p $(OBJ_DIR)
 
-$(OBJ_DIR)%.o: $(SRC_DIR)%.cpp
+$(OBJ_DIR)%.o: $(SRC_DIR)%.cpp | $(OBJ_DIR)
 	@echo $(Y) "Compiling $<" $(X)
-	@$(CC) $(CFLAGS) $(INCLUDE) -c $< -o $@
+	@$(CXX) $(CXXFLAGS) $(INCLUDE) -c $< -o $@
 	@printf $(UP)$(CUT)
 
 clean:
