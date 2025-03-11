@@ -1,6 +1,6 @@
 MAKEFILE 		= Makefile
 
-NAME				= MoarBrainz
+NAME				= SedIsForLosers
 
 SRC_DIR			= src/
 OBJ_DIR			= .obj/
@@ -8,6 +8,8 @@ OBJ_DIR			= .obj/
 INCLUDE_DIR	= include/
 INCLUDE			= -I$(INCLUDE_DIR)
 HEADERS			= $(shell find $(INCLUDE_DIR) -name "*.hpp")
+
+DEPS				= $(HEADERS) $(MAKEFILE)
 
 CXX					= c++
 CXXFLAGS			= -Wall -Wextra -Werror -std=c++98
