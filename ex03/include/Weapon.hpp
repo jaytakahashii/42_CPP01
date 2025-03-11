@@ -1,16 +1,13 @@
-#include <iostream>
+#pragma once
+
 #include <string>
 
 class Weapon {
  private:
-  /* data */
+  std::string _type;
+
  public:
-  Weapon(/* args */);
-  ~Weapon();
+  Weapon(const std::string& type);
+  const std::string& getType() const;
+  void setType(const std::string& newType);
 };
-
-Weapon::Weapon(/* args */) {
-}
-
-Weapon::~Weapon() {
-}
