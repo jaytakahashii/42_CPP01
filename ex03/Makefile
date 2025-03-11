@@ -1,49 +1,34 @@
-# **************************************************************************** #
-#                                                                              #
-#                                                         :::      ::::::::    #
-#    Makefile                                           :+:      :+:    :+:    #
-#                                                     +:+ +:+         +:+      #
-#    By: jay <jay@student.42.fr>                    +#+  +:+       +#+         #
-#                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2025/02/28 07:08:25 by jay               #+#    #+#              #
-#    Updated: 2025/02/28 07:09:09 by jay              ###   ########.fr        #
-#                                                                              #
-# **************************************************************************** #
-
-
-# Makefile
 MAKEFILE 		= Makefile
 
-# project name
-NAME			= UnnecessaryViolence
+NAME				= UnnecessaryViolence
 
 SRC_DIR			= src/
 OBJ_DIR			= .obj/
 
-INCLUDE_DIR		= include/
+INCLUDE_DIR	= include/
 INCLUDE			= -I$(INCLUDE_DIR)
 HEADERS			= $(shell find $(INCLUDE_DIR) -name "*.hpp")
 
-DEPS			= $(HEADERS) $(MAKEFILE)
+DEPS				= $(HEADERS) $(MAKEFILE)
 
-CC				= c++
+CC					= c++
 CFLAGS			= -Wall -Wextra -Werror -std=c++98
 
-RM				= rm -rf
+RM					= rm -rf
 
 SRC_FILES		= $(shell find $(SRC_DIR) -name "*.cpp" | sed "s/.*\///")
 
-OBJS			= $(addprefix $(OBJ_DIR), $(SRC_FILES:.cpp=.o))
+OBJS				= $(addprefix $(OBJ_DIR), $(SRC_FILES:.cpp=.o))
 
-# color ***********************
-Y				= "\033[33m"
-R				= "\033[31m"
-G				= "\033[32m"
-B				= "\033[34m"
-X				= "\033[0m"
-UP				= "\033[A"
-CUT				= "\033[K"
-# *****************************
+# color ************
+Y		= "\033[33m"
+R		= "\033[31m"
+G		= "\033[32m"
+B		= "\033[34m"
+X		= "\033[0m"
+UP	= "\033[A"
+CUT	= "\033[K"
+# ******************
 
 all: $(NAME)
 
@@ -73,8 +58,4 @@ fclean:
 
 re: fclean all
 
-leak: CFLAGS += -g
-leak: LFLAGS += -fsanitize=address
-leak: re
-
-.PHONY: all clean fclean re leak
+.PHONY: all clean fclean re
