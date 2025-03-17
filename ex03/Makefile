@@ -1,6 +1,6 @@
 MAKEFILE 		= Makefile
 
-NAME				= MoarBrainz
+NAME				= UnnecessaryViolence
 
 SRC_DIR			= src/
 OBJ_DIR			= .obj/
