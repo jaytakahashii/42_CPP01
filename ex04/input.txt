@@ -1,0 +1,6 @@
+hello world!
+Hi, Nice to meet you. I'm Jay from 42Tokyo.
+I'm learning C++ programming now.
+What's your name?
+Welcome to 42Tokyo!
+Is this your first time in Japan?
