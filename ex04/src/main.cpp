@@ -27,14 +27,14 @@ int main(int argc, char* argv[]) {
   std::string s1 = argv[2];
   std::string s2 = argv[3];
 
-  std::ifstream inFile(filename);
+  std::ifstream inFile(filename.c_str());
   if (!inFile) {
     std::cerr << RED "Error: " RESET << "Could not open file '" << filename
               << "'" << std::endl;
     return 1;
   }
 
-  std::ofstream outFile(filename + ".replace");
+  std::ofstream outFile((filename + ".replace").c_str());
   if (!outFile) {
     std::cerr << "Error: Could not create output file." << std::endl;
     return 1;
