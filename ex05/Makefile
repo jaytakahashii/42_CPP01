@@ -6,18 +6,23 @@ SRC_DIR			= src/
 OBJ_DIR			= .obj/
 
 INCLUDE_DIR	= include/
-INCLUDE			= -I$(INCLUDE_DIR)
-HEADERS			= $(shell find $(INCLUDE_DIR) -name "*.hpp")
+INCLUDE			= -I $(INCLUDE_DIR)
+HEADERS			= color.hpp \
+							Harl.hpp
+HEADER			= $(addprefix $(INCLUDE_DIR), $(HEADERS))
 
-DEPS				= $(HEADERS) $(MAKEFILE)
+DEPS				= $(HEADER) $(MAKEFILE)
 
 CXX					= c++
 CXXFLAGS		= -Wall -Wextra -Werror -std=c++98
 
 RM					= rm -rf
 
-SRC_FILES		= $(shell find $(SRC_DIR) -name "*.cpp" | sed "s/.*\///")
+SRC_DIR			= src/
+SRC_FILES		=	main.cpp \
+							Harl.cpp
 
+SRCS				= $(addprefix $(SRC_DIR), $(SRC_FILES))
 OBJS				= $(addprefix $(OBJ_DIR), $(SRC_FILES:.cpp=.o))
 
 # color ************
