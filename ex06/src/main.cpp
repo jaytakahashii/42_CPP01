@@ -1,16 +1,13 @@
-#include <iostream>
-
 #include "Harl.hpp"
 
-int main() {
+int main(int argc, char *argv[]) {
+  if (argc != 2) {
+    std::cerr << "Usage: ./harlFilter <log level>" << std::endl;
+    return 1;
+  }
+
   Harl harl;
+  harl.complain(argv[1]);
 
-  std::cout << "Testing each log level:" << std::endl;
-  harl.complain("DEBUG");
-  harl.complain("INFO");
-  harl.complain("WARNING");
-  harl.complain("ERROR");
-
-  std::cout << "\nTesting unknown log level:" << std::endl;
-  harl.complain("UNKNOWN");
+  return 0;
 }
