@@ -1,6 +1,6 @@
 MAKEFILE 		= Makefile
 
-NAME				= BraiiiiiiinnnzzzZ
+NAME				= SedIsForLosers
 
 SRC_DIR			= src/
 OBJ_DIR			= .obj/
@@ -57,7 +57,8 @@ clean:
 fclean:
 	@$(RM) $(OBJ_DIR)
 	@$(RM) $(NAME)
-	@echo $(R) "$(NAME) $(OBJ_DIR) has been removed!!" $(X)
+	@$(RM) input.txt.replace
+	@echo $(R) "$(NAME) $(OBJ_DIR) and input.txt.replace has been removed!!" $(X)
 
 re: fclean all
 
