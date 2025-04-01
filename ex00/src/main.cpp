@@ -11,6 +11,4 @@ int main() {
   randomChump("RandomZombie");  // auto destruct
 
   // Zombie z3; // error: Zombie Class has no default constructor
-
-  return 0;
 }
