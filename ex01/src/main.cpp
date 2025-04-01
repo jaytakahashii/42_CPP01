@@ -8,6 +8,6 @@ int main() {
       horde[i].announce();
     }
   }
-  delete[] horde;
+  delete[] horde;  // if not deleted, memory leak occurs
   return 0;
 }

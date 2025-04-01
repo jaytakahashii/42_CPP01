@@ -1,12 +1,12 @@
 #include "Zombie.hpp"
 
 int main() {
-  Zombie z1("StackZombie");
-  z1.announce();  // auto destruct
+  Zombie z1("StackZombie");  // instance on stack
+  z1.announce();             // auto destruct
 
-  Zombie* z2 = newZombie("HeapZombie");
+  Zombie* z2 = newZombie("HeapZombie");  // instance on heap
   z2->announce();
-  delete z2;  // manual destruct
+  delete z2;  // manual destruct. if not deleted, memory leak occurs
 
   randomChump("RandomZombie");  // auto destruct
 

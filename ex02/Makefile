@@ -5,19 +5,17 @@ NAME				= HiThisIsBrain
 SRC_DIR			= src/
 OBJ_DIR			= .obj/
 
-INCLUDE_DIR	= include/
-INCLUDE			= -I$(INCLUDE_DIR)
-# HEADERS			= $(shell find $(INCLUDE_DIR) -name "*.hpp")
-
-DEPS				= $(HEADERS) $(MAKEFILE)
+DEPS				= $(MAKEFILE)
 
 CXX					= c++
 CXXFLAGS		= -Wall -Wextra -Werror -std=c++98
 
 RM					= rm -rf
 
-SRC_FILES		= $(shell find $(SRC_DIR) -name "*.cpp" | sed "s/.*\///")
+SRC_DIR			= src/
+SRC_FILES		=	main.cpp
 
+SRCS				= $(addprefix $(SRC_DIR), $(SRC_FILES))
 OBJS				= $(addprefix $(OBJ_DIR), $(SRC_FILES:.cpp=.o))
 
 # color ************
@@ -44,7 +42,7 @@ $(OBJ_DIR):
 
 $(OBJ_DIR)%.o: $(SRC_DIR)%.cpp | $(OBJ_DIR)
 	@echo $(Y) "Compiling $<" $(X)
-	@$(CXX) $(CXXFLAGS) $(INCLUDE) -c $< -o $@
+	@$(CXX) $(CXXFLAGS) -c $< -o $@
 	@printf $(UP)$(CUT)
 
 clean:
