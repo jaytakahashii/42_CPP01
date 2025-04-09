@@ -2,21 +2,25 @@
 
 #include <iostream>
 
-void Harl::debug(void) {
-  std::cout << "[DEBUG] I love having extra bacon on my burger!" << std::endl;
-}
+#include "color.hpp"
 
-void Harl::info(void) {
-  std::cout << "[INFO] Extra bacon costs money. You should add more!"
+void Harl::debug(void) {
+  std::cout << "[DEBUG]" << " I love having extra bacon on my burger!"
             << std::endl;
 }
 
+void Harl::info(void) {
+  std::cout << BLUE "[INFO]" RESET
+            << " Extra bacon costs money. You should add more!" << std::endl;
+}
+
 void Harl::warning(void) {
-  std::cout << "[WARNING] I deserve free extra bacon!" << std::endl;
+  std::cout << YELLOW "[WARNING]" RESET << " I deserve free extra bacon!"
+            << std::endl;
 }
 
 void Harl::error(void) {
-  std::cout << "[ERROR] This is unacceptable!" << std::endl;
+  std::cout << RED "[ERROR]" RESET << " This is unacceptable!" << std::endl;
 }
 
 void Harl::complain(std::string level) {
