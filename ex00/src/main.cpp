@@ -2,7 +2,7 @@
 
 int main() {
   Zombie z1("StackZombie");  // instance on stack
-  z1.announce();             // auto destruct
+  z1.announce();
 
   Zombie* z2 = newZombie("HeapZombie");  // instance on heap
   z2->announce();
@@ -10,5 +10,5 @@ int main() {
 
   randomChump("RandomZombie");  // auto destruct
 
-  // Zombie z3; // error: Zombie Class has no default constructor
+  return 0;
 }
