@@ -48,4 +48,6 @@ int main(int argc, char* argv[]) {
 
   std::cout << "Replacement complete: " << filename << " -> " << filename
             << ".replace" << std::endl;
+
+  return 0;
 }
