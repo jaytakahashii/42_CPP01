@@ -9,7 +9,7 @@ int main() {
   harl.complain("WARNING");
   harl.complain("ERROR");
 
-  std::cout << "\nTesting unknown log level:" << std::endl;
+  std::cout << "Testing unknown log level:" << std::endl;
   harl.complain("UNKNOWN");
 
   return 0;
