@@ -11,4 +11,6 @@ int main() {
 
   std::cout << "\nTesting unknown log level:" << std::endl;
   harl.complain("UNKNOWN");
+
+  return 0;
 }
