@@ -1,30 +1,34 @@
 #include "Harl.hpp"
 
+#include "color.hpp"
+
 void Harl::debug() {
-  std::cout << "[ DEBUG ]\n"
-            << "I love having extra bacon for my "
-               "7XL-double-cheese-triple-pickle-special-ketchup burger.\n"
-            << std::endl;
+  std::cout
+      << "[ DEBUG ]\n"
+      << "I love having extra bacon for my "
+         "7XL-double-cheese-triple-pickle-specialketchup burger. I really do!\n"
+      << std::endl;
 }
 
 void Harl::info() {
-  std::cout << "[ INFO ]\n"
-            << "I cannot believe adding extra bacon costs more money. You "
-               "didn't put enough bacon!\n"
+  std::cout << BLUE "[ INFO ]\n" RESET
+            << "I cannot believe adding extra bacon costs more money.\n"
+               "You didn’t put enough bacon in my burger!\n"
+               "If you did, I wouldn’t be asking for more!\n"
             << std::endl;
 }
 
 void Harl::warning() {
-  std::cout << "[ WARNING ]\n"
+  std::cout << YELLOW "[ WARNING ]\n" RESET
             << "I think I deserve to have some extra bacon for free.\n"
-            << "I've been coming for years whereas you started working here "
-               "since last month.\n"
+            << "I’ve been coming for years, whereas you started working here "
+               "just last month.\n"
             << std::endl;
 }
 
 void Harl::error() {
-  std::cout << "[ ERROR ]\n"
-            << "This is unacceptable, I want to speak to the manager now.\n"
+  std::cout << RED "[ ERROR ]\n" RESET
+            << "This is unacceptable! I want to speak to the manager now.\n"
             << std::endl;
 }
 
