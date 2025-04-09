@@ -16,10 +16,10 @@ void replaceString(std::string& content, const std::string& s1,
 
 int main(int argc, char* argv[]) {
   if (argc != 4) {
-    std::cerr
-        << RED "Error: " RESET
-        << "Invalid number of arguments. Usage: ./replace <filename> <s1> <s2>"
-        << std::endl;
+    std::cerr << RED "Error: " RESET
+              << "Invalid number of arguments. Usage: ./SedIsForLosers "
+                 "<filename> <s1> <s2>"
+              << std::endl;
     return 1;
   }
 
@@ -48,4 +48,6 @@ int main(int argc, char* argv[]) {
 
   std::cout << "Replacement complete: " << filename << " -> " << filename
             << ".replace" << std::endl;
+
+  return 0;
 }

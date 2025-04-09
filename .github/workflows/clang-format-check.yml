@@ -19,6 +19,8 @@ jobs:
           - "ex04/include"
           - "ex05/src"
           - "ex05/include"
+          - "ex06/src"
+          - "ex06/include"
 
     steps:
       - name: Checkout code

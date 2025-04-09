@@ -1,13 +1,14 @@
 MAKEFILE 		= Makefile
 
-NAME				= BraiiiiiiinnnzzzZ
+NAME				= harlFilter
 
 SRC_DIR			= src/
 OBJ_DIR			= .obj/
 
 INCLUDE_DIR	= include/
 INCLUDE			= -I $(INCLUDE_DIR)
-HEADERS			= Zombie.hpp
+HEADERS			= color.hpp \
+							Harl.hpp
 HEADER			= $(addprefix $(INCLUDE_DIR), $(HEADERS))
 
 DEPS				= $(HEADER) $(MAKEFILE)
@@ -19,9 +20,7 @@ RM					= rm -rf
 
 SRC_DIR			= src/
 SRC_FILES		=	main.cpp \
-							Zombie.cpp \
-							newZombie.cpp \
-							randomChump.cpp
+							Harl.cpp
 
 SRCS				= $(addprefix $(SRC_DIR), $(SRC_FILES))
 OBJS				= $(addprefix $(OBJ_DIR), $(SRC_FILES:.cpp=.o))
