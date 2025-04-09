@@ -10,4 +10,6 @@ int main() {
     }
   }
   delete[] horde;  // if not deleted, memory leak occurs
+
+  return 0;
 }
